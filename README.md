@@ -28,6 +28,13 @@ npm install
 Edite o arquivo .env caso já exista, ou crie e edite caso não exista. Insira as informações do banco de dados no arquivo .env, como tipo de bd, user, password e nome da database;
 
 ```bash
+HOST=127.0.0.1
+PORT=3333
+NODE_ENV=development
+APP_NAME=AdonisJs
+APP_URL=http://${HOST}:${PORT}
+CACHE_VIEWS=false
+APP_KEY=rNKVL07b9bigMTIfyCRDIjfgTI8LVt4x
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
