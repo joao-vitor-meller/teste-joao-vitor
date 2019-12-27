@@ -50,14 +50,13 @@ Utilize o comando `adonis serve --dev` para rodar o aplicativo criado.
 adonis serve --dev
 ```
 
-Testar API com Endpoints:
+Testar API:
 
-GET /weather-stations -> método stations.index
-POST /weather-stations -> método stations.store
-GET /weather-stations/:id -> método stations.show
-<br>
-POST /weather-data/:id -> método weatherdata.store
-GET /weather-data/:id -> método weatherdata.show
+1. GET /weather-stations -> método stations.index
+2. POST /weather-stations -> método stations.store
+3. GET /weather-stations/:id -> método stations.show
+4. POST /weather-data/:id -> método weatherdata.store
+5. GET /weather-data/:id -> método weatherdata.show
 
 Para rodar o script de inserção de dados Dark Sky na API basta rodar `node darksky.js`. 
 
