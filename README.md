@@ -19,13 +19,13 @@ Para utilizar a CLI do Adonis caso não tenha, basta instala-lá localmente.
 npm install -g @adonisjs/cli
 ```
 
-Use o comando abaixo para instalar as dependencias;
+Na pasta do projeto, use o comando `npm install` abaixo para instalar as dependencias;
 
 ```bash
 npm install
 ```
 
-Edite o arquivo .env caso já exista, ou crie e edite caso não exista. Insira as informações do banco de dados no arquivo .env, como tipo de bd, user, password e nome da database;
+Edite o arquivo .env caso já exista, ou crie e insira as informações caso não exista o arquivo .env, como tipo de bd, user, password e nome da database;
 
 ```bash
 HOST=127.0.0.1
@@ -49,6 +49,15 @@ Utilize o comando `adonis serve --dev` para rodar o aplicativo criado.
 ```bash
 adonis serve --dev
 ```
+
+Testar API com Endpoints:
+
+GET /weather-stations -> método stations.index
+POST /weather-stations -> método stations.store
+GET /weather-stations/:id -> método stations.show
+<br>
+POST /weather-data/:id -> método weatherdata.store
+GET /weather-data/:id -> método weatherdata.show
 
 Para rodar o script de inserção de dados Dark Sky na API basta rodar `node darksky.js`. 
 
