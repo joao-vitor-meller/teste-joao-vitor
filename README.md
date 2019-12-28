@@ -2,18 +2,24 @@
 
 A API em AdonisJs já vem com algumas pré-configurações:
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+1. Bodyparser;
+2. Session;
+3. Authentication;
+4. Web security middleware;
+5. CORS;
+6. Edge template engine;
+7. Lucid ORM;
+8. Migrations and seeds;
+
+Neste projeto Node Js foram utilizados:
+
+1. AdonisJs: Framework Backend;
+2. Axios: para requisiões http;
+3. MomentJs: Analisa e exibe datas em qualquer fuso horário.
 
 ## Setup
 
-Para utilizar a CLI do Adonis caso não tenha, basta instala-lá localmente.
+Para utilizar a CLI do Adonis caso não tenha, basta instala-lá localmente, lembrando que o Node já deve estar instalado.
 
 ```bash
 npm install -g @adonisjs/cli
@@ -58,7 +64,7 @@ Testar API:
 4. POST /weather-data/:id -> método weatherdata.store
 5. GET /weather-data/:id -> método weatherdata.show
 
-Para rodar o script de inserção de dados Dark Sky na API basta rodar `node darksky.js`. 
+Para rodar o script de inserção de dados Dark Sky na API basta rodar o comando `node darksky.js`. ** lembrando que a API deve estar rodando para rodar o script **.
 
 ```bash
 node darksky.js
