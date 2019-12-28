@@ -1,19 +1,65 @@
 # Adonis API application
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+A API em AdonisJs já vem com algumas pré-configurações:
 
 1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+2. Session
+3. Authentication
+4. Web security middleware
+5. CORS
+6. Edge template engine
+7. Lucid ORM
+8. Migrations and seeds
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Para utilizar a CLI do Adonis caso não tenha, basta instala-lá localmente.
 
 ```bash
-adonis new yardstick --api-only
+npm install -g @adonisjs/cli
 ```
 
-or manually clone the repo and then run `npm install`.
+Na pasta do projeto, use o comando `npm install` abaixo para instalar as dependencias;
+
+```bash
+npm install
+```
+
+Edite o arquivo .env caso já exista, ou crie e insira as informações caso não exista o arquivo .env, como tipo de bd, user, password e nome da database;
+
+```bash
+HOST=127.0.0.1
+PORT=3333
+NODE_ENV=development
+APP_NAME=AdonisJs
+APP_URL=http://${HOST}:${PORT}
+CACHE_VIEWS=false
+APP_KEY=rNKVL07b9bigMTIfyCRDIjfgTI8LVt4x
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_DATABASE=irriga
+HASH_DRIVER=bcrypt
+```
+
+Utilize o comando `adonis serve --dev` para rodar o aplicativo criado. 
+
+```bash
+adonis serve --dev
+```
+
+Testar API:
+
+1. GET /weather-stations -> método stations.index
+2. POST /weather-stations -> método stations.store
+3. GET /weather-stations/:id -> método stations.show
+4. POST /weather-data/:id -> método weatherdata.store
+5. GET /weather-data/:id -> método weatherdata.show
+
+Para rodar o script de inserção de dados Dark Sky na API basta rodar `node darksky.js`. 
+
+```bash
+node darksky.js
+```
