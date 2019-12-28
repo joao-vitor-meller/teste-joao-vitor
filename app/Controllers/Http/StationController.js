@@ -30,9 +30,9 @@ class StationController {
       try {
           const data = request.only(['id','name', 'timezone', 'latitude', 'longitude', 'altitude'])
           const station = await Station.create(data)
-          //* após criar nova estação, utilizando database.row, é criada uma tabela para ela contendo seu <id> no nome weather_data_<id>. *//
+          /** após criar nova estação, utilizando database.row, é criada uma tabela para ela contendo seu <id> no nome weather_data_<id>. */
           await Database.raw("CREATE TABLE weather_data_"+station.id+" ( id int(11) NOT NULL, air_temperature float NOT NULL, air_humidity int(11) DEFAULT NULL, wind_speed float NOT NULL, rainfall float NOT NULL DEFAULT '0', moment datetime NOT NULL, PRIMARY KEY (`id`,`moment`), CONSTRAINT `weather_data_"+station.id+"_FK` FOREIGN KEY (`id`) REFERENCES `weather_stations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE  ) ENGINE=InnoDB DEFAULT CHARSET=utf8; ")
-          response.status(201).send(station) // retorno 201 = estação criada.
+          response.status(201).send(station)  // retorno 201 = estação criada.
        } catch (err) {
           if (err.code === 'ER_DUP_ENTRY') { //  id já existe, não é possivel inserir outro igual.
               response.status(400).send('ID já existe, insira outro.') 

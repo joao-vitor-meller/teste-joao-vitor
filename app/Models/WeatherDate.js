@@ -4,12 +4,19 @@
 const Model = use('Model')
 
 class WeatherDate extends Model {
+
+    /**
+     *  Não é preciso criar a coluna de horario criado
+     */
     static get createdAtColumn () {
-      return null; // não é preciso criar as colunas de horario criado
+      return null; // 
     }
     
+    /**
+     *  Não é preciso criar a coluna de horario atualizado
+     */
     static get updatedAtColumn () {
-      return null;  // não é preciso criar as colunas de horario atualizado
+      return null; 
     }
 }
 
