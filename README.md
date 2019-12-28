@@ -50,6 +50,8 @@ DB_DATABASE=irriga
 HASH_DRIVER=bcrypt
 ```
 
+O arquivo SQL schema `dbSchema-IRRIGA.sql` pode ser encontrado na pasta do projeto.
+ 
 Utilize o comando `adonis serve --dev` para rodar o aplicativo criado. 
 
 ```bash
