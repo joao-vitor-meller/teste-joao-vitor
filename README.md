@@ -22,7 +22,7 @@ Neste projeto Node Js foram utilizados:
 Para utilizar a CLI do Adonis caso não tenha, basta instala-lá localmente, lembrando que o Node já deve estar instalado, no linux -> sudo npm i -g @adonisjs/cli
 
 ```bash
-npm install -g @adonisjs/cli
+sudo npm install -g @adonisjs/cli
 ```
 
 Na pasta do projeto, use o comando `npm install` abaixo para instalar as dependencias;
